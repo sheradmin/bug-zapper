@@ -1,5 +1,6 @@
 package com.bugzapper.livewallpaper;
 
+import android.util.Log;
 import org.anddev.andengine.entity.sprite.AnimatedSprite;
 import org.anddev.andengine.opengl.texture.region.TiledTextureRegion;
 
@@ -34,14 +35,31 @@ class OwlSprite extends AnimatedSprite {
     }
 
     public void onManagedUpdateOwl() {
-            if (!this.stopped) {
-                if (out) {
-                    out();
-                } else {
-                    come();
-                }
+        Log.d("onManagedUpdateOwl", String.valueOf(stopped));
+        Log.d("onManagedUpdateOwl", String.valueOf(out));
+        if (!this.stopped) {
+            if (out) {
+                out();
+            } else {
+                come();
             }
         }
+    }
+
+    public void resetOwl() {
+        this.out = true;
+        this.stopped = true;
+        this.count = 0;
+        this.tile = 0;
+        this.x = this.getInitialX();
+        this.y = this.getInitialY();
+
+        this.reset();
+        long[] frameDurations = new long[6];
+        Arrays.fill(frameDurations, 600);
+        this.animate(frameDurations, 0, 5, true);
+        this.stopAnimation(11);
+    }
 
     public void come() {
         this.setVisible(true);
@@ -114,12 +132,12 @@ class OwlSprite extends AnimatedSprite {
     private void timer() {
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        OwlSprite.this.stopped = false;
-                        OwlSprite.this.animate(1000);
-                    }
-                }, 6000);
+            @Override
+            public void run() {
+                OwlSprite.this.stopped = false;
+                OwlSprite.this.animate(1000);
+            }
+        }, 6000);
     }
 
     public void setStopped(boolean stopped) {

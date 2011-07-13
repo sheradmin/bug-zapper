@@ -127,8 +127,8 @@ class MothSprite extends AnimatedSprite {
         }
         int k = 0;
         for (int currentRad = maxRad; currentRad >= 0; currentRad = (k == pathCount / 2) ? (currentRad - (maxRad / (pathCount / 2))) : 0) {
-            float changeAngle1 = (float) ((Math.random() - 0.5) * (Math.PI / 3));
-            float changeAngle2 = (float) ((Math.random() - 0.5) * (Math.PI / 3));
+            float changeAngle1 = (float) ((Math.random() - 0.5) * (Math.PI));
+            float changeAngle2 = (float) ((Math.random() - 0.5) * (Math.PI));
             currentAngle1 += changeAngle1;
             currentAngle2 += changeAngle2;
             pathX[k] = (float) (zapCenterX + Math.cos(currentAngle1) * currentRad);
