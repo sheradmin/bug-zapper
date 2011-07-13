@@ -17,7 +17,7 @@ public class About extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.about);
 		WebView view = (WebView)findViewById(R.id.text);
-		String data = "<html><head></head><body>Hello BugZapper</body></html>";
+		String data = "<html><head></head><body>A country home setting with a bug zapper. Interactive parts: Owl, zapper and the moon.</body></html>";
 		view.loadData(data, "text/xml", "UTF-8");
 	}
 }

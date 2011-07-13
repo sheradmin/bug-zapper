@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8caff745-bed3-4662-a704-89c3bf87ce65" name="Default" comment="" />
+    <list default="true" readonly="true" id="8caff745-bed3-4662-a704-89c3bf87ce65" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/gfx/moth_flash9.png" afterPath="$PROJECT_DIR$/assets/gfx/moth_flash9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BugZapperLiveWallpaper.ipr" afterPath="$PROJECT_DIR$/BugZapperLiveWallpaper.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BugZapperLiveWallpaper.iws" afterPath="$PROJECT_DIR$/BugZapperLiveWallpaper.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings_arrays.xml" afterPath="$PROJECT_DIR$/res/values/strings_arrays.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/About.java" afterPath="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/About.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/BugZapperLiveWallpaper.java" afterPath="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/BugZapperLiveWallpaper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/MothSprite.java" afterPath="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/MothSprite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/OwlSprite.java" afterPath="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/OwlSprite.java" />
+    </list>
     <ignored path="BugZapperLiveWallpaper.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,10 +68,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BugZapperLiveWallpaper.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BugZapperLiveWallpaper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bugzapper/livewallpaper/BugZapperLiveWallpaper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="286" column="22" selection-start="12195" selection-end="12195" vertical-scroll-proportion="3.1924398">
+            <state line="301" column="35" selection-start="12597" selection-end="12597" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="About.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/bugzapper/livewallpaper/About.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="48" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MothSprite.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MothSprite.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/bugzapper/livewallpaper/MothSprite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="36" selection-start="3261" selection-end="3261" vertical-scroll-proportion="0.0">
+            <state line="125" column="47" selection-start="4054" selection-end="4054" vertical-scroll-proportion="0.46896553">
               <folding />
             </state>
           </provider>
@@ -89,7 +109,7 @@
       <file leaf-file-name="OwlSprite.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bugzapper/livewallpaper/OwlSprite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0">
+            <state line="56" column="16" selection-start="1488" selection-end="1488" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -113,18 +133,18 @@
         <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/ColorPickerActivity.java" />
         <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/ColorPickerDialog.java" />
         <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/ColorPickerPref.java" />
-        <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/About.java" />
         <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/BugZapperConfig.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/xml/wallpaper_settings.xml" />
         <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/BugZapperSettings.java" />
         <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/LiveWallpaperService.java" />
         <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/TouchLiveWallpaperService.java" />
-        <option value="$PROJECT_DIR$/res/values/strings_arrays.xml" />
-        <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/MothSprite.java" />
-        <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/OwlSprite.java" />
-        <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/BugZapperLiveWallpaper.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings_arrays.xml" />
+        <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/BugZapperLiveWallpaper.java" />
+        <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/OwlSprite.java" />
+        <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/About.java" />
+        <option value="$PROJECT_DIR$/src/com/bugzapper/livewallpaper/MothSprite.java" />
       </list>
     </option>
   </component>
@@ -135,7 +155,7 @@
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -162,8 +182,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Favorites" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -250,152 +268,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugZapperLiveWallpaper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugZapperLiveWallpaper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugZapperLiveWallpaper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugZapperLiveWallpaper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andengine.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugZapperLiveWallpaper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugZapperLiveWallpaper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andengine.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugZapperLiveWallpaper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugZapperLiveWallpaper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andengine.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="options" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugZapperLiveWallpaper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugZapperLiveWallpaper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andengine.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="options" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resolutionpolicy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugZapperLiveWallpaper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugZapperLiveWallpaper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andengine.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -612,6 +488,25 @@
     <option name="FORCE_UPDATE" value="false" />
     <configuration useDefault="true">C:\Users\Sherali\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\Android\Elyor\bug-zapper\BugZapperLiveWallpaper" />
+          <option name="myCopyRoot" value="D:\Android\Elyor\bug-zapper\BugZapperLiveWallpaper" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\Android\Elyor\bug-zapper\BugZapperLiveWallpaper" />
+          <option name="myCopyRoot" value="D:\Android\Elyor\bug-zapper\BugZapperLiveWallpaper" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -645,28 +540,28 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32927817" sideWeight="0.6299694" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JavaRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JavaRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22627737" sideWeight="0.2324159" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31350482" sideWeight="0.49067315" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22627737" sideWeight="0.2324159" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25718608" sideWeight="0.26605505" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.470948" sideWeight="0.15733983" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.73394495" sideWeight="0.8361719" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2344932" sideWeight="0.5305466" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46945336" sideWeight="0.15733983" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5401929" sideWeight="0.8361719" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3149847" sideWeight="0.49067315" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
@@ -718,9 +613,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/entity/modifier/PathModifier.java">
+    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/engine/options/EngineOptions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="58" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.0" />
+        <state line="126" column="8" selection-start="3706" selection-end="3706" vertical-scroll-proportion="0.76632303" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/engine/options/resolutionpolicy/BaseResolutionPolicy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="22" selection-start="192" selection-end="192" vertical-scroll-proportion="0.22857143" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/util/SmartList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="16" selection-start="2646" selection-end="2646" vertical-scroll-proportion="1.8857143" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/entity/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="473" column="25" selection-start="11408" selection-end="11408" vertical-scroll-proportion="0.45017183" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/entity/scene/Scene.java">
@@ -728,29 +638,14 @@
         <state line="72" column="11" selection-start="2516" selection-end="2516" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/engine/options/resolutionpolicy/FillResolutionPolicy.java">
+    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/entity/IEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/engine/options/resolutionpolicy/FixedResolutionPolicy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/opengl/vertex/SpriteBatchVertexBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="234" selection-end="234" vertical-scroll-proportion="-5.6174498" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/engine/options/RenderOptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="30" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.5103668" />
+        <state line="157" column="16" selection-start="5224" selection-end="5224" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/entity/sprite/batch/SpriteBatch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="44" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.0" />
+        <state line="255" column="16" selection-start="9009" selection-end="9009" vertical-scroll-proportion="-0.19243987" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
@@ -758,54 +653,60 @@
         <state line="15" column="44" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bugzapper/livewallpaper/MothSprite.java">
+    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/engine/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="36" selection-start="3261" selection-end="3261" vertical-scroll-proportion="0.0" />
+        <state line="718" column="0" selection-start="24103" selection-end="24103" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings_arrays.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="17" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.71428573">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/entity/particle/Particle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="16" selection-start="2615" selection-end="2615" vertical-scroll-proportion="0.4742268">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/entity/sprite/BaseSprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="2313" selection-end="2313" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bugzapper/livewallpaper/OwlSprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/engine/options/EngineOptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="8" selection-start="3706" selection-end="3706" vertical-scroll-proportion="0.76632303">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/engine/options/resolutionpolicy/BaseResolutionPolicy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="22" selection-start="192" selection-end="192" vertical-scroll-proportion="0.22857143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/util/SmartList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="16" selection-start="2646" selection-end="2646" vertical-scroll-proportion="1.8857143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/entity/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="473" column="25" selection-start="11408" selection-end="11408" vertical-scroll-proportion="0.45017183">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/andengine.jar!/org/anddev/andengine/entity/IEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="0" selection-start="7262" selection-end="7262" vertical-scroll-proportion="0.33277312">
+        <state line="56" column="16" selection-start="1488" selection-end="1488" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bugzapper/livewallpaper/BugZapperLiveWallpaper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="22" selection-start="12195" selection-end="12195" vertical-scroll-proportion="3.1924398">
+        <state line="301" column="35" selection-start="12597" selection-end="12597" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bugzapper/livewallpaper/About.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="48" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bugzapper/livewallpaper/MothSprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="47" selection-start="4054" selection-end="4054" vertical-scroll-proportion="0.46896553">
           <folding />
         </state>
       </provider>

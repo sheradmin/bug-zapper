@@ -32,6 +32,8 @@ import org.anddev.andengine.util.Debug;
 import org.anddev.andengine.util.modifier.IModifier;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Sher
@@ -425,6 +427,10 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
     @Override
     protected void onResume() {
         super.onResume();
+        if (owlSprite != null) {
+            owlSprite.resetOwl();
+        }
+        Log.d("BugZapper","onResume");
     }
 
     // ===========================================================
