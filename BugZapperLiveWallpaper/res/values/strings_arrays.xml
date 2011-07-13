@@ -1,0 +1,61 @@
+<resources>
+    <string-array name="skySpeedDescriptions">
+		<item>very fast</item>
+		<item>fast</item>
+		<item>normal</item>
+		<item>slow</item>
+		<item>very slow</item>
+	</string-array>
+
+    <string-array name="skySpeedValues">
+		<item>10</item>
+		<item>30</item>
+		<item>60</item>
+		<item>80</item>
+		<item>100</item>
+	</string-array>
+
+    <string-array name="mothSpeedDescriptions">
+		<item>very fast</item>
+		<item>fast</item>
+		<item>normal</item>
+		<item>slow</item>
+		<item>very slow</item>
+	</string-array>
+
+    <string-array name="mothSpeedValues">
+		<item>7000</item>
+		<item>15000</item>
+		<item>30000</item>
+		<item>60000</item>
+		<item>250000</item>
+	</string-array>
+
+    <string-array name="mothCountDescriptions">
+		<item>1</item>
+		<item>5</item>
+		<item>10</item>
+		<item>15</item>
+	</string-array>
+
+    <string-array name="mothCountValues">
+		<item>1</item>
+		<item>5</item>
+		<item>10</item>
+		<item>15</item>
+	</string-array>
+
+    <string-array name="zapperColorDescriptions">
+		<item>Purple</item>
+		<item>Blue</item>
+        <item>Red</item>
+		<item>Yellow</item>
+	</string-array>
+
+	<string-array name="zapperColorValues">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+</resources>
