@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:title="@string/wallpaper_settings" android:key="wallpaper_settings">
+
+    <CheckBoxPreference android:key="sound_moth"
+                        android:title="@string/sound_zap_pref" android:summaryOn="@string/sound_zap_pref_on"
+                        android:summaryOff="@string/sound_zap_pref_off"
+                        android:defaultValue="true"/>
+
+    <PreferenceScreen android:title="@string/about" android:summary="@string/aboutSummary">
+        <intent android:targetPackage="com.bugzapper.livewallpaper" android:action="android.intent.action.MAIN"
+                android:targetClass="com.bugzapper.livewallpaper.About"/>
+    </PreferenceScreen>
+
+    <Preference
+            android:title="@string/bgcolor"
+            android:summary="@string/bgcolorsummary"
+            android:key="custom_bg_color"/>
+    <ListPreference
+            android:key="sky_speed"
+            android:title="@string/skySpeed"
+            android:summary="@string/skySpeedSummary"
+            android:entries="@array/skySpeedDescriptions"
+            android:entryValues="@array/skySpeedValues"
+            android:dialogTitle="@string/skySpeedTitle"
+            android:defaultValue="60"/>
+    <ListPreference
+            android:key="moth_count"
+            android:title="@string/mothCount"
+            android:summary="@string/mothCountSummary"
+            android:entries="@array/mothCountDescriptions"
+            android:entryValues="@array/mothCountValues"
+            android:dialogTitle="@string/mothCountTitle"
+            android:defaultValue="5"/>
+
+    <ListPreference
+            android:key="zapper_color"
+            android:title="@string/zapperColor"
+            android:summary="@string/zapperColorSummary"
+            android:entries="@array/zapperColorDescriptions"
+            android:entryValues="@array/zapperColorValues"
+            android:dialogTitle="@string/zapperColorTitle"
+            android:defaultValue="0"/>
+
+    <!--<PreferenceScreen android:title="@string/bgcolor" android:summary="@string/bgcolorsummary">
+        <intent android:targetPackage="com.bugzapper.livewallpaper" android:action="android.intent.action.MAIN"
+                android:targetClass="com.bugzapper.livewallpaper.ColorPickerActivity"/>
+    </PreferenceScreen>-->
+    <!--<CheckBoxPreference android:key="sound_owl"
+   android:title="@string/sound_owl_pref" android:summaryOn="@string/sound_owl_pref_on"
+   android:summaryOff="@string/sound_owl_pref_off" android:defaultValue="true" />
+
+<CheckBoxPreference android:key="sound_zapper"
+   android:title="@string/sound_zapper_pref" android:summaryOn="@string/sound_zapper_pref_on"
+   android:summaryOff="@string/sound_zapper_pref_off"
+   android:defaultValue="true" />-->
+</PreferenceScreen>

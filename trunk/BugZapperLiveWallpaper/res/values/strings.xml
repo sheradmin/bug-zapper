@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Bug Zapper Live Wallpaper</string>
+	<string name="wallpaper_description">Bug Zapper Live Wallpaper</string>
+	<string name="sound_zap_pref">Zap sound</string>
+	<string name="sound_zap_pref_on">Zap sound on.</string>
+	<string name="sound_zap_pref_off">Zap sound off.</string>
+
+    <string name="about">About.</string>
+    <string name="aboutSummary">About Summary.</string>
+
+    <string name="bgcolor">Sky color.</string>
+    <string name="bgcolorsummary">Change the color of the sky.</string>
+
+    <string name="skySpeed">Cloud speed.</string>
+    <string name="skySpeedSummary">Choose the speed of the clouds.</string>
+    <string name="skySpeedTitle">Cloud speed.</string>
+
+    <string name="mothSpeed">Moth Speed.</string>
+    <string name="mothSpeedSummary">Moth Speed Summary.</string>
+    <string name="mothSpeedTitle">Moth Speed Title.</string>
+
+    <string name="mothCount">Bug count.</string>
+    <string name="mothCountSummary">Choose the number of bugs flying.</string>
+    <string name="mothCountTitle">Bug Count.</string>
+
+    <string name="zapperColor">Zapper Color.</string>
+    <string name="zapperColorSummary">Choose zapper color.</string>
+    <string name="zapperColorTitle">Zapper Color.</string>
+
+	<!--<string name="sound_owl_pref">Owl Sound</string>
+	<string name="sound_owl_pref_on">Owl sound on.</string>
+	<string name="sound_owl_pref_off">Owl sound off.</string>
+	
+	<string name="sound_zapper_pref">Zapper Sound</string>
+	<string name="sound_zapper_pref_on">Zapper sound on.</string>
+	<string name="sound_zapper_pref_off">Zapper sound off.</string>-->
+
+	<!-- Settings -->
+	<string name="wallpaper_settings">Settings</string>
+
+	<!-- Touch Input Setting -->
+
+
+
+
+	<!-- Particle Colour Settings -->
+
+
+
+
+
+
+
+	<!-- Background Colour Settings -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>
