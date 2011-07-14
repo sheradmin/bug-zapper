@@ -5,13 +5,14 @@
     <libelement value="jar://$MODULE_DIR$/lib/andenginelivewallpaperextension.jar!/" />
     <conelement value="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK" />
     <src_description expected_position="1">
-      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
       <src_folder value="file://$MODULE_DIR$/gen" expected_position="1" />
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
     </src_description>
   </component>
   <component name="FacetManager">
     <facet type="android" name="Android">
       <configuration>
+        <option name="PLATFORM_NAME" value="Android 2.2 Platform" />
         <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/gen" />
         <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/gen" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/AndroidManifest.xml" />
@@ -25,6 +26,7 @@
         <option name="USE_CUSTOM_COMPILER_MANIFEST" value="false" />
         <option name="CUSTOM_COMPILER_MANIFEST" value="" />
         <option name="APK_PATH" value="" />
+        <option name="ADD_ANDROID_LIBRARY" value="true" />
         <option name="LIBRARY_PROJECT" value="false" />
         <option name="RUN_PROCESS_RESOURCES_MAVEN_TASK" value="true" />
         <option name="GENERATE_UNSIGNED_APK" value="false" />
@@ -38,7 +40,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/gen" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Android 2.2 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="andengine.jar">
@@ -60,6 +62,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" scope="PROVIDED" name="Android 2.2 Platform" level="application" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">
