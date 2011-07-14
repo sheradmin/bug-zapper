@@ -35,8 +35,8 @@ class OwlSprite extends AnimatedSprite {
     }
 
     public void onManagedUpdateOwl() {
-        Log.d("onManagedUpdateOwl", String.valueOf(stopped));
-        Log.d("onManagedUpdateOwl", String.valueOf(out));
+//        Log.d("onManagedUpdateOwl", String.valueOf(stopped));
+//        Log.d("onManagedUpdateOwl", String.valueOf(out));
         if (!this.stopped) {
             if (out) {
                 out();
@@ -142,10 +142,6 @@ class OwlSprite extends AnimatedSprite {
 
     public void setStopped(boolean stopped) {
         this.stopped = stopped;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
     }
 
     public boolean isStopped() {

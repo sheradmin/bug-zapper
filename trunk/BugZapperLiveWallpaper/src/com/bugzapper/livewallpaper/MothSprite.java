@@ -62,7 +62,7 @@ class MothSprite extends AnimatedSprite {
                 this.timer();
                 this.stopped = false;
             }
-            if (deadPointX < this.mX && deadPointX + 32 > this.mX && deadPointY < this.mY && deadPointY + 34 > this.mY && isZapperOn()) {
+            if (deadPointX - 10 < this.mX && deadPointX + 30 > this.mX && deadPointY - 7 < this.mY && deadPointY + 35 > this.mY && isZapperOn()) {
                 this.setScale(1.2f);
                 int zI = (BugZapperConfig.getInstance().getZapperIndex() * 4) + 2;
                 this.animate(new long[]{50, 50}, zI, zI + 1, true);
