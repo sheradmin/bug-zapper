@@ -62,7 +62,7 @@ class MothSprite extends AnimatedSprite {
                 this.timer();
                 this.stopped = false;
             }
-            if (deadPointX - 10 < this.mX && deadPointX + 30 > this.mX && deadPointY - 7 < this.mY && deadPointY + 35 > this.mY && isZapperOn()) {
+            if (deadPointX < this.mX && deadPointX + 32 > this.mX && deadPointY < this.mY && deadPointY + 34 > this.mY && isZapperOn()) {
                 this.setScale(1.2f);
                 int zI = (BugZapperConfig.getInstance().getZapperIndex() * 4) + 2;
                 this.animate(new long[]{50, 50}, zI, zI + 1, true);
@@ -112,47 +112,52 @@ class MothSprite extends AnimatedSprite {
     }
 
     private LoopEntityModifier getLoopEntityModifier(float zapCenterX, float zapCenterY, int maxRad) {
-        int pathCount = 16 + ((int) (Math.random() * 50)) * 2;
+        List<Integer> radiusList = new ArrayList<Integer>();
+        int rad = maxRad;
+        radiusList.add(rad);
+        while(rad !=0 ) {
+            int radChange = MathUtils.random(1, 10) - 6;
+
+            if (radChange < 0) {
+                radChange = 0;
+            }
+
+            rad -= radChange;
+            if (rad < 0) {
+                rad = 0;
+            }
+
+            radiusList.add(rad);
+        }
+
+        for(int i = radiusList.size() - 2; i >= 0; i--) {
+            radiusList.add(radiusList.get(i));
+        }
+
+        int pathCount = radiusList.size();
+
         float[] pathX = new float[pathCount];
         float[] pathY = new float[pathCount];
 
-        float currentAngle1 = (float) (Math.random() * Math.PI * 2);
-        float currentAngle2 = (float) (Math.random() * Math.PI * 2);
-        if (angleX != 0f) {
-            currentAngle1 = angleX;
-            currentAngle2 = angleY;
-        } else {
-            angleX = currentAngle1;
-            angleY = currentAngle2;
-        }
-        int k = 0;
-        for (int currentRad = maxRad; currentRad >= 0; currentRad = (k == pathCount / 2) ? (currentRad - (maxRad / (pathCount / 2))) : 0) {
-            float changeAngle1 = (float) ((Math.random() - 0.5) * (Math.PI));
-            float changeAngle2 = (float) ((Math.random() - 0.5) * (Math.PI));
-            currentAngle1 += changeAngle1;
-            currentAngle2 += changeAngle2;
-            pathX[k] = (float) (zapCenterX + Math.cos(currentAngle1) * currentRad);
-            pathY[k] = (float) (zapCenterY + Math.sin(currentAngle1) * currentRad);
+        float currentAngle = (float) (Math.random() * Math.PI * 2);
 
-            pathX[(pathCount - 1) - k] = (float) (zapCenterX + Math.cos(currentAngle2) * currentRad);
-            pathY[(pathCount - 1) - k] = (float) (zapCenterY + Math.sin(currentAngle2) * currentRad);
-            k++;
+        for (int k = 0; k < pathCount; k++) {
+            currentAngle += MathUtils.random(-0.2f, 0.2f);
+            pathX[k] = (float) (zapCenterX + Math.cos(currentAngle) * radiusList.get(k));
+            pathY[k] = (float) (zapCenterY + Math.sin(currentAngle) * radiusList.get(k));
         }
 
         final PathModifier.Path path = new PathModifier.Path(pathCount * 2 - 1);
 
-//        Log.i("zapx:zapy", zapCenterX + ":" + zapCenterY);
         for (int i = 0; i < pathCount; i++) {
-//            Log.i("x:y", pathX[i] + ":" + pathY[i]);
             path.to(pathX[i], pathY[i]);
         }
 
         for (int i = pathCount - 2; i >= 0; i--) {
-//            Log.i("x:y", pathX[i] + ":" + pathY[i]);
             path.to(pathX[i], pathY[i]);
         }
 
-        PathModifier pathModifier = new PathModifier(MathUtils.random(20f, 50f), path, null, new PathModifier.IPathModifierListener() {
+        PathModifier pathModifier = new PathModifier(MathUtils.random(50f, 80f), path, null, new PathModifier.IPathModifierListener() {
 
             @Override
             public void onPathStarted(PathModifier pPathModifier, IEntity pEntity) {
