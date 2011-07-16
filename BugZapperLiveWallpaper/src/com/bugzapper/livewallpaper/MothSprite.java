@@ -12,6 +12,9 @@ import java.util.*;
 
 /**
  * @author Sher
+ *
+ * Animated bugs (different types and sizes) that fly into the bug zapper giving off bright flash and making "zap"
+ * sound. Color flash should match color of bug zapper light selected
  */
 class MothSprite extends AnimatedSprite {
 
@@ -47,6 +50,9 @@ class MothSprite extends AnimatedSprite {
         registerEntityModifier();
     }
 
+    /**
+     * Register Entity Modifier
+     */
     private void registerEntityModifier() {
         this.clearEntityModifiers();
         LoopEntityModifier loopEntityModifier = getLoopEntityModifier(zapCenterX, zapCenterY, maxRad);
@@ -89,6 +95,9 @@ class MothSprite extends AnimatedSprite {
                 }, (long) (Math.random() * 10));
     }
 
+    /**
+     * Reset Bug to default
+     */
     private void resetMoth() {
         if (scale < 0.8f) {
             scale = 1f;
@@ -166,21 +175,6 @@ class MothSprite extends AnimatedSprite {
 
             @Override
             public void onPathWaypointStarted(PathModifier pPathModifier, IEntity pEntity, int pWaypointIndex) {
-//                mothAnimate();
-                /*switch(pWaypointIndex) {
-					case 0:
-						MothSprite.this.animate(new long[]{100, 100}, 4, 5, true);
-						break;
-					case 1:
-						MothSprite.this.animate(new long[]{100, 100}, 2, 3, true);
-						break;
-					case 2:
-						MothSprite.this.animate(new long[]{100, 100}, 0, 1, true);
-						break;
-					case 3:
-						MothSprite.this.animate(new long[]{100, 100}, 6, 7, true);
-						break;
-				}*/
             }
 
             @Override

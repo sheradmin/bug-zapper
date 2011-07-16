@@ -49,13 +49,16 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
     private static int CAMERA_WIDTH = 480;
     private static int CAMERA_HEIGHT = 720;
 
-    private static int D_WIDTH = 0;
-    private static int D_HEIGHT = 0;
-
     // ===========================================================
     // Fields
     // ===========================================================
 
+    /**
+     * The Scene class is the root container for all objects to be drawn on the screen. A Scene has a specific amount
+     * of Layers, which themselves can contain a (fixed or dynamic) amount of Entities. There are subclasses, like the
+     * CameraScene/HUD/MenuScene that are drawing themselves to the same position of the Scene no matter where the
+     * camera is positioned to.
+     */
     private Scene scene = null;
     private AutoParallaxBackground autoParallaxBackground;
     private Texture mTextureCloud;
@@ -74,6 +77,10 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
     private TextureRegion mParallaxLayerBackground;
     private TextureRegion mParallaxLayerGround;
 
+    /**
+     * An OwlSprite is an object that can be drawn, like Sprites, Rectangles, Text or Lines.
+     * An OwlSprite has a animation position/rotation/scale/color/etc...
+     */
     private OwlSprite owlSprite;
 
     private Sound owlSound;
@@ -84,9 +91,14 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
     float zapCenterX = 0f;
     float zapCenterY = 0f;
 
+    /**
+     * A Camera defines the rectangle of the scene that is drawn on the screen, as not the whole scene is visible all
+     * the time. Usually there is one Camera per Scene, except for the SplitScreenEngines. There are subclasses that
+     * allow zooming and smooth position changes of the Camera.
+     */
     private Camera mCamera = null;
     private TiledSprite zapperSprite;
-    private  ScreenOrientation screenOrientation;
+    private ScreenOrientation screenOrientation;
 
     // Shared Preferences
     private SharedPreferences mSharedPreferences;
@@ -103,39 +115,33 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
     // Methods for/from SuperClass/Interfaces
     // ===========================================================
 
+    /**
+     * The Engine make the game proceed in small discrete steps of time. The Engine manages to synchronize a periodic
+     * drawing and updating of the Scene, which contains all the content that your game is currently handling actively.
+     * There usually is one Scene per Engine, except for the SplitScreenEngines.
+     *
+     * @return org.anddev.andengine.engine.Engine
+     */
     @Override
     public org.anddev.andengine.engine.Engine onLoadEngine() {
-//        final DisplayMetrics displayMetrics = new DisplayMetrics();
-//        WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
-//        wm.getDefaultDisplay().getMetrics(displayMetrics);
-
-//        CAMERA_WIDTH = 480;
-//        CAMERA_HEIGHT = 720;
-
         screenOrientation = ScreenOrientation.PORTRAIT;
-//        Log.i("displayMetrics.widthPixels", String.valueOf(displayMetrics.widthPixels));
-//        Log.i("displayMetrics.heightPixels", String.valueOf(displayMetrics.heightPixels));
-//        if (displayMetrics.widthPixels > displayMetrics.heightPixels) {
-//            screenOrientation = ScreenOrientation.LANDSCAPE;
-//            CAMERA_WIDTH = 620;
-//            CAMERA_HEIGHT = 320;
-//        }
-//        CAMERA_WIDTH = displayMetrics.widthPixels;
-//        CAMERA_HEIGHT = displayMetrics.heightPixels;
-
         mCamera = new Camera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
         final EngineOptions engineOptions = new EngineOptions(true, screenOrientation,
                 new FillResolutionPolicy(), mCamera).setNeedsSound(true);
         engineOptions.getTouchOptions().setRunOnUpdateThread(true);
 
-        org.anddev.andengine.engine.Engine eng = new org.anddev.andengine.engine.Engine(engineOptions);
-        return eng;
+        return new org.anddev.andengine.engine.Engine(engineOptions);
     }
 
     @Override
     public void onLoadResources() {
         // Set the Base Texture Path
         TextureRegionFactory.setAssetBasePath("gfx/");
+        /**
+         * A Texture is a 'image' in the memory of the graphics chip. On Android the width and height of a Texture has
+         * to be a power of 2. Therefore AndEngine assembles a Texture from a couple of ITextureSources, so the space
+         * can be used better.         *
+         */
         this.mTextureCloud = new Texture(1024, 1024, TextureOptions.DEFAULT);
 
         this.mTextureTree = new Texture(1024, 1024, TextureOptions.BILINEAR);
@@ -179,6 +185,14 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
 
     }
 
+    /**
+     * The Scene class is the root container for all objects to be drawn on the screen. A Scene has a specific amount
+     * of Layers, which themselves can contain a (fixed or dynamic) amount of Entities. There are subclasses, like the
+     * CameraScene/HUD/MenuScene that are drawing themselves to the same position of the Scene no matter where the
+     * camera is positioned to.
+     *
+     * @return Scene
+     */
     @Override
     public Scene onLoadScene() {
         scene = new Scene(6);
@@ -191,9 +205,19 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
         //Sky END
 
         //Zapper Begin
+        //A lighted bug zapper hanging on the porch
         zapperX = centerX + 375;
         zapperY = 461;
         zapperSprite = new TiledSprite(zapperX, zapperY, this.mParallaxLayerZapper) {
+            /**
+             * I was wondering if you could do a small snippet to show how to properly update a sprite. I have added a
+             * listener to the zapper and i want it to on/off.
+             *
+             * @param pSceneTouchEvent
+             * @param pTouchAreaLocalX
+             * @param pTouchAreaLocalY
+             * @return
+             */
             @Override
             public boolean onAreaTouched(final TouchEvent pSceneTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY) {
                 if (pSceneTouchEvent.getAction() == TouchEvent.ACTION_DOWN) {
@@ -220,8 +244,19 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
         detachAndAttachMothSprite();
         //Moth End
 
+        /**
+         * Create Owl animated sprite object
+         */
         owlSprite = new OwlSprite(105, 280, this.mParallaxLayerOwl) {
-            @Override
+            /**
+             * I was wondering if you could do a small snippet to show how to properly update a sprite. I have added a
+             * listener to the owl and i want it to move my sprite to whatever position is being touched
+             *
+             * @param pSceneTouchEvent
+             * @param pTouchAreaLocalX
+             * @param pTouchAreaLocalY
+             * @return
+             */
             public boolean onAreaTouched(final TouchEvent pSceneTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY) {
                 if (pSceneTouchEvent.getAction() == TouchEvent.ACTION_DOWN) {
                     BugZapperLiveWallpaper.this.owlSound.play();
@@ -238,6 +273,8 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
         }));
 
         //Moon Begin
+        //Create Moon sprite object.
+        //Lighted moon that changes upon touch (full moon, half moon, quarter moon, etc.)
         final TiledSprite moonSprite = new TiledSprite(centerX + 330, centerY, this.mParallaxLayerMoon) {
             @Override
             public boolean onAreaTouched(final TouchEvent pSceneTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY) {
@@ -250,6 +287,7 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
         moonSprite.setCurrentTileIndex(3);
         //Moon End
 
+        //-	A large tree and a grassy lawn
         Sprite bgSprite = new Sprite(centerX, 0, this.mParallaxLayerBackground);
         Sprite groundSprite = new Sprite(centerX, CAMERA_HEIGHT - this.mParallaxLayerGround.getHeight(), this.mParallaxLayerGround);
 
@@ -281,18 +319,21 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
         return scene;
     }
 
+    /**
+     * Detach oll bugs and Add new bugs.
+     */
     private void detachAndAttachMothSprite() {
         this.runOnUpdateThread(new Runnable() {
             @Override
             public void run() {
                 /* Now it is save to remove the entity! */
                 scene.getChild(5).detachChildren();
-                updateMothSprite();
+                createMothSprite();
             }
         });
     }
 
-    private void updateMothSprite() {
+    private void createMothSprite() {
         int k = BugZapperConfig.getInstance().getMothCount();
         int j = 0;
         for (int i = 0; i < k; i++) {
@@ -331,6 +372,10 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
         });
     }
 
+    /**
+     * Create Cloud
+     * Clouds that move in the sky and over the moon
+     */
     private void createSkySprite() {
         final Sprite skyOne = new Sprite(0, 100, this.mParallaxLayerCloudOne);
 
@@ -385,6 +430,12 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
 
     }
 
+    /**
+     * Interface definition for a callback to be invoked when a shared preference is changed.
+     *
+     * @param sharedPrefs
+     * @param pKey
+     */
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPrefs, String pKey) {
         if (pKey == null || BugZapperSettings.SOUND_MOTH_KEY.equals(pKey)) {
@@ -400,7 +451,6 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
             BugZapperConfig.getInstance().setMothCount(Integer.parseInt(sharedPrefs.getString(BugZapperSettings.MOTH_COUNT_KEY, "5")));
             if (pKey != null) {
                 detachAndAttachMothSprite();
-                updateMothSprite();
             }
         }
         if ((pKey == null) || BugZapperSettings.SKY_SPEED_KEY.equals(pKey)) {
@@ -430,12 +480,23 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
         if (owlSprite != null) {
             owlSprite.resetOwl();
         }
-        Log.d("BugZapper","onResume");
     }
 
     // ===========================================================
     // Methods
     // ===========================================================
+
+    /**
+     * Scroll with home screen
+     *
+     * @param xOffset
+     * @param yOffset
+     * @param xOffsetStep
+     * @param yOffsetStep
+     * @param xPixelOffset
+     * @param yPixelOffset
+     * @param preview
+     */
     @Override
     public void offsetsChanged(float xOffset, float yOffset, float xOffsetStep,
                                float yOffsetStep, int xPixelOffset, int yPixelOffset, boolean preview) {

@@ -9,7 +9,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * @author Sher
+ *  An owl in the tree that interacts with touch (hoots, flies away and then returns later)
  */
 class OwlSprite extends AnimatedSprite {
 
@@ -35,8 +35,6 @@ class OwlSprite extends AnimatedSprite {
     }
 
     public void onManagedUpdateOwl() {
-//        Log.d("onManagedUpdateOwl", String.valueOf(stopped));
-//        Log.d("onManagedUpdateOwl", String.valueOf(out));
         if (!this.stopped) {
             if (out) {
                 out();
