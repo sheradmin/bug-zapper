@@ -22,7 +22,7 @@ import android.os.SystemClock;
 import android.view.MotionEvent;
 
 /**
- * @author Sher
+ * @author JAX
  */
 public abstract class TouchLiveWallpaperService extends GLWallpaperService
 		implements IGameInterface, IOffsetsChanged {

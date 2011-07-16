@@ -2,7 +2,7 @@ package com.bugzapper.livewallpaper;
 
 /**
  * Created by IntelliJ IDEA.
- * User: Sherali
+ * User: JAX
  * Date: 6/27/11
  * Time: 4:41 PM
  * To change this template use File | Settings | File Templates.
