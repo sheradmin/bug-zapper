@@ -21,15 +21,13 @@ class MothSprite extends AnimatedSprite {
     private boolean stopped = false;
     private float deadPointX, deadPointY;
     private Sound zapperSound;
-    private float zapCenterX;
-    private float zapCenterY;
-    private int maxRad = 200;
-    private int index = 0;
+    private float zapCenterX; //X coordinate of the center of the zapper
+    private float zapCenterY; //Y coordinate of the center of the zapper
+    private static int maxRadius = 200; //the bugs will fly within the maximum radius from the center of the zapper
+    private int index = 0; //index of the frame of the animation
     private float scale = 1f;
-    private float angleX = 0f;
-    private float angleY = 0f;
 
-    /**
+    /** Creating a new bug on the screen
      * @param zapCenterX
      * @param zapCenterY
      * @param deadPointX
@@ -55,7 +53,7 @@ class MothSprite extends AnimatedSprite {
      */
     private void registerEntityModifier() {
         this.clearEntityModifiers();
-        LoopEntityModifier loopEntityModifier = getLoopEntityModifier(zapCenterX, zapCenterY, maxRad);
+        LoopEntityModifier loopEntityModifier = getLoopEntityModifier(zapCenterX, zapCenterY);
         this.registerEntityModifier(loopEntityModifier);
     }
 
@@ -68,14 +66,17 @@ class MothSprite extends AnimatedSprite {
                 this.timer();
                 this.stopped = false;
             }
+
+            //Checking if the bug is zapped
             if (deadPointX < this.mX && deadPointX + 32 > this.mX && deadPointY < this.mY && deadPointY + 34 > this.mY && isZapperOn()) {
                 this.setScale(1.2f);
                 int zI = (BugZapperConfig.getInstance().getZapperIndex() * 4) + 2;
-                this.animate(new long[]{50, 50}, zI, zI + 1, true);
+                this.animate(new long[]{50, 50}, zI, zI + 1, true); //show flash image
                 this.playSound();
-                this.stopped = true;
+                this.stopped = true; //stop and hide the animation of this bug
             }
         }
+
         super.onManagedUpdate(pSecondsElapsed);
     }
 
@@ -112,7 +113,7 @@ class MothSprite extends AnimatedSprite {
     }
 
     private void mothAnimate() {
-        this.animate(new long[]{30, 30}, index, index + 1, true);
+        this.animate(new long[]{30, 30}, index, index + 1, true); //animate the flying bug to its next state(frame)
     }
 
 
@@ -120,53 +121,65 @@ class MothSprite extends AnimatedSprite {
         return BugZapperConfig.getInstance().isZapperOn();
     }
 
-    private LoopEntityModifier getLoopEntityModifier(float zapCenterX, float zapCenterY, int maxRad) {
-        List<Integer> radiusList = new ArrayList<Integer>();
-        int rad = maxRad;
-        radiusList.add(rad);
-        while(rad !=0 ) {
-            int radChange = MathUtils.random(1, 10) - 6;
+    /**
+     * Builds the path along which this bug flies. The path is a sequence of points on the screen.
+     * When the bug flies, it moves from one point to the next in sequence.
+     * @param zapCenterX
+     * @param zapCenterY
+     * @return
+     */
+    private LoopEntityModifier getLoopEntityModifier(float zapCenterX, float zapCenterY) {
+        List<Integer> radiusList = new ArrayList<Integer>(); //list of radii for approaching the zapper and then flying away from the zapper
+        int radius = maxRadius;
+        radiusList.add(radius); //the starting point for the bug is at a distance of maxRadius from the center of the zapper
+        while(radius != 0 ) { //continue until it reaches the center of the zapper
+            int radiusChange = MathUtils.random(1, 10) - 6; //each time the radius is changed by a random value
 
-            if (radChange < 0) {
-                radChange = 0;
+            if (radiusChange < 0) {
+                radiusChange = 0; //if radiusChange is negative, the radius doesn't change and will be the same as previous. This is to avoid quick approaching of the bug towards the zapper.
             }
 
-            rad -= radChange;
-            if (rad < 0) {
-                rad = 0;
+            radius -= radiusChange;
+            if (radius < 0) {
+                radius = 0;
             }
 
-            radiusList.add(rad);
+            radiusList.add(radius);
         }
 
-        for(int i = radiusList.size() - 2; i >= 0; i--) {
+        for(int i = radiusList.size() - 2; i >= 0; i--) { //appending the radius list for flying away from the zapper
             radiusList.add(radiusList.get(i));
         }
 
-        int pathCount = radiusList.size();
+        int pathCount = radiusList.size(); //number of points on the path of the bug
 
         float[] pathX = new float[pathCount];
         float[] pathY = new float[pathCount];
 
-        float currentAngle = (float) (Math.random() * Math.PI * 2);
+        float currentAngle = (float) (Math.random() * Math.PI * 2); //the starting point should be at a random angle relative to the center of the zapper
 
         for (int k = 0; k < pathCount; k++) {
-            currentAngle += MathUtils.random(-0.2f, 0.2f);
-            pathX[k] = (float) (zapCenterX + Math.cos(currentAngle) * radiusList.get(k));
-            pathY[k] = (float) (zapCenterY + Math.sin(currentAngle) * radiusList.get(k));
+            currentAngle += MathUtils.random(-0.2f, 0.2f); //every time the bug moves from point to point, its angle changes by a random value.
+            pathX[k] = (float) (zapCenterX + Math.cos(currentAngle) * radiusList.get(k)); //Each point on the path is build using the corresponding radius value
+            pathY[k] = (float) (zapCenterY + Math.sin(currentAngle) * radiusList.get(k)); //and the corresponding angle
         }
+
+        //if the bug reaches the last point on the path, it goes through the path in reverse order, thefore
+        //there will be 2*pathCount points on the PathModifier.Path
 
         final PathModifier.Path path = new PathModifier.Path(pathCount * 2 - 1);
 
-        for (int i = 0; i < pathCount; i++) {
+        for (int i = 0; i < pathCount; i++) { //from initial point to the last point
             path.to(pathX[i], pathY[i]);
         }
 
-        for (int i = pathCount - 2; i >= 0; i--) {
+        for (int i = pathCount - 2; i >= 0; i--) { //from the last point back to the initial point
             path.to(pathX[i], pathY[i]);
         }
 
-        PathModifier pathModifier = new PathModifier(MathUtils.random(50f, 80f), path, null, new PathModifier.IPathModifierListener() {
+        PathModifier pathModifier = new PathModifier(
+                MathUtils.random(50f, 80f), //speed (random) of the bug for moving from one point to another
+                path, null, new PathModifier.IPathModifierListener() {
 
             @Override
             public void onPathStarted(PathModifier pPathModifier, IEntity pEntity) {
