@@ -36,7 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Sher
+ * @author JAX
  * Main application
  */
 public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements SharedPreferences.OnSharedPreferenceChangeListener {

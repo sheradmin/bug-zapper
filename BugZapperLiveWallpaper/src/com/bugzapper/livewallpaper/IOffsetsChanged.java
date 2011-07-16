@@ -1,7 +1,7 @@
 package com.bugzapper.livewallpaper;
 
 /**
- * @author Sher
+ * @author JAX
  */
 public interface IOffsetsChanged {
 

@@ -11,7 +11,7 @@ import org.anddev.andengine.util.MathUtils;
 import java.util.*;
 
 /**
- * @author Sher
+ * @author JAX
  *
  * Animated bugs (different types and sizes) that fly into the bug zapper giving off bright flash and making "zap"
  * sound. Color flash should match color of bug zapper light selected
