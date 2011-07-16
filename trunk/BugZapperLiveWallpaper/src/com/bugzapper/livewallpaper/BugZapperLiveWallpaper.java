@@ -37,6 +37,7 @@ import java.util.List;
 
 /**
  * @author Sher
+ * Main application
  */
 public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements SharedPreferences.OnSharedPreferenceChangeListener {
     // ===========================================================
@@ -326,7 +327,7 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
         this.runOnUpdateThread(new Runnable() {
             @Override
             public void run() {
-                /* Now it is save to remove the entity! */
+                /* Now it is safe to remove the entity! */
                 scene.getChild(5).detachChildren();
                 createMothSprite();
             }
@@ -365,7 +366,7 @@ public class BugZapperLiveWallpaper extends TouchLiveWallpaperService implements
         this.runOnUpdateThread(new Runnable() {
             @Override
             public void run() {
-                /* Now it is save to remove the entity! */
+                /* Now it is safe to remove the entity! */
                 scene.getChild(1).detachChildren();
                 createSkySprite();
             }

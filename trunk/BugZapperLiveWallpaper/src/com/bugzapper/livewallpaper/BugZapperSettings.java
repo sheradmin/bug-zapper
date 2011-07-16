@@ -7,14 +7,12 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 
 /**
- * @author Sher
+ * For working with application settings
  */
 public class BugZapperSettings extends PreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     public static final String SOUND_MOTH_KEY = "sound_moth";
-    //    public static final String BG_COLOR_KEY = "bg_color";
     public static final String BG_COLOR_KEY = "custom_bg_color";
-    public static final String MOTH_SPEED_KEY = "moth_speed";
     public static final String MOTH_COUNT_KEY = "moth_count";
     public static final String SKY_SPEED_KEY = "sky_speed";
     public static final String ZAPPER_COLOR_KEY = "zapper_color";
