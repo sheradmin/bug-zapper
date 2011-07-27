@@ -1,5 +1,6 @@
 package com.bugzapper.livewallpaper;
 
+import android.util.Log;
 import org.anddev.andengine.audio.sound.Sound;
 import org.anddev.andengine.entity.IEntity;
 import org.anddev.andengine.entity.modifier.LoopEntityModifier;
@@ -77,7 +78,11 @@ class MothSprite extends AnimatedSprite {
             }
         }
 
-        super.onManagedUpdate(pSecondsElapsed);
+        try {
+            super.onManagedUpdate(pSecondsElapsed);
+        } catch (Exception e) {
+            Log.i("BugZapperError", e.getMessage());
+        }
     }
 
     private void playSound() {
